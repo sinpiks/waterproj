@@ -1,0 +1,56 @@
+    <div class="formContainer">
+        <form action="" method="post">
+
+            <div class="form">
+                {% csrf_token %}
+                {% if success %}
+                <div class="successful">
+                    <strong>Sending message is successful.</strong>
+                </div>
+                {% endif %}
+
+
+                <div class="formInfo">
+                    {{ form.name }}
+                    {{ form.email }}
+                    {{ form.phone_number }}
+                </div>
+                <div class="formMessage">
+                    {{ form.message }}
+                </div>
+
+
+                <div class="error">
+                    <!--проверки-->
+                    {% if form.message.errors %}
+                    <div>
+                        <strong>Ошибка при вводе сообщения:{{ form.message.errors }}</strong>
+                    </div>
+                    {% endif %}
+
+                    {% if form.name.errors %}
+                    <div>
+                        <strong>Ошибка при вводе имени:{{ form.name.errors }}</strong>
+                    </div>
+                    {% endif %}
+
+                    {% if form.email.errors %}
+                    <div>
+                        <strong>Ошибка при вводе почты: {{ form.email.errors }}</strong>
+                    </div>
+                    {% endif %}
+
+                    {% if form.phone_number.errors %}
+                    <div>
+                        <strong>Ошибка при вводе телефона: {{ form.phone_number.errors }}</strong>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="formButton">
+                    <button type="submit">Отправить</button>
+                </div>
+               
+            </div>
+        </form>
+    </div>

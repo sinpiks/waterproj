@@ -1,0 +1,325 @@
+.main-catalog-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1);
+}
+
+.container-catalog{
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* grid-template-rows: repeat(4, 16rem); */
+    grid-template-rows: repeat(1);
+}
+
+.product-example img{
+    width: 100%;
+}
+
+.ivent-catalog{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-productContainer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1);
+}
+
+.things-container{
+    grid-column: 1/9;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1);
+}
+
+.productCard-container img{
+    width: 100%;
+}
+
+.mini-water{
+    grid-column: 1/13;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1);
+}
+
+.middle-water{
+    grid-column: 1/9;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1);
+}
+
+.sweety-water{
+    grid-column: 1/13;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1);
+}
+
+.catalog-description{
+    grid-column: 1/9;
+    grid-row: 1/2;
+}
+
+.bottleOfWater{
+    grid-row: 3/4;
+}
+
+.middleBottleOfWater{
+    grid-row: 5/6;
+}
+
+.sweetBottleOfWater{
+    grid-row: 7/8;
+}
+
+.main-whyNot-container{
+    align-items: center;
+}
+
+.main-whyNot-container h1{
+    text-align: center;
+    font-size: 2em;
+    padding-top: 4em;
+}
+
+.main-whyNot-container li{
+    /* display: inline; */
+    text-align: center;
+    align-items: center;
+}
+
+.main-whyNot-container img{
+    width: 5%;
+    text-align: center;
+    align-items: center;
+}
+
+.main-vacancies-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1);
+}
+
+.left-vacancies-bar{
+    grid-column: 1/3;
+}
+
+.vacancies-card-container{
+    grid-column: 3/11;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2);
+}
+
+.vacancies-card-container a{
+    color: rgba(0, 0, 0, 1);
+}
+
+.vacancies-card-container img{
+    width: 100%;
+}
+
+div.vacancies-card{
+    text-align: center;
+    padding: 2em;
+}
+
+.right-vacancies-bar{
+    grid-column: 11/13;
+}
+
+.contacts{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1);
+}
+
+.left-vacancies-contacts-bar{
+    grid-column: 1/2;
+}
+
+.vacancies-content-container{
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1);
+    margin-top: 3em;
+}
+
+.right-vacancies-contacts-bar{
+    grid-column: 12/13;
+}
+
+div.vacancies-contact-card{
+    text-align: center;
+}
+
+@media(max-width: 900px){
+    .container-catalog{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3);
+    }
+    
+    .text-container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2);
+        text-align: center;
+    }
+
+    .text-container img{
+        width: 60%;
+        margin: 1.5em;
+
+        align-items: center;
+    }
+
+    .things-container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1);
+    }
+
+    .things-container img{
+        width: 100%;
+    }
+
+    .mini-water{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2);
+    }
+
+    .middle-water{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1);
+    }
+
+    .sweety-water{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2);
+    }
+
+    .hOne {
+        font-size: 1.5em;
+        margin-top: 2em;
+    }
+    
+    .pOne {
+        font-size: 0.7em;
+        text-align: center;
+    }
+    
+    .formulaOne{
+        margin-top: 2em;
+    }
+
+    .vacancies-card-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3);
+    }
+
+    .vacancies-content-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2);
+        padding-bottom: 1.5em;
+    }
+
+    .vacancies-contact-card{
+        padding: 1em;
+    }
+}
+
+@media(max-width: 600px){
+    .container-catalog{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4);
+    }
+
+    .product-example{
+        margin-inline: 0;
+    }
+
+    .things-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2);
+    }
+
+    .mini-water{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3);
+    }
+
+    .middle-water{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2);
+    }
+
+    .sweety-water{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3);
+    }
+
+    .vacancies-card-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4);
+    }
+
+    .vacancies-content-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2);
+        padding-bottom: 1.5em;
+    }
+
+    .vacancies-contact-card{
+        padding: 1em;
+    }
+
+    .main-aboutUs-headline-container p {
+        padding-left: 0;
+        font-size: 1.5em;
+    }
+    
+    .aboutUs-top-text-container{
+        font-size: 2em;
+        text-align: left;
+        z-index: 1;
+        margin-top: 1em;
+        padding-left: 0;
+    }
+
+    .imageOne img{
+        width: 100%;
+    }
+    
+    .imageTwo img{
+        width: 60%;
+    }
+
+    .description h1{
+        font-size: 1.5em;
+    }
+
+    .secondDescription p{
+        font-size: 0.8em;
+    }
+    
+    .secondDescription{
+        margin-top: 0;
+    }
+
+    .left-vacancies-bar{
+        display: none;
+    }
+
+    .right-vacancies-bar{
+        display: none;
+    }
+
+    .vacancies-card{
+        margin: 0;
+        padding: 0;
+    }
+
+    .vacancies-card-container img{
+        width: 50%;
+    }
+}

@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+          content="Минеральная вода, вода, Новоазавская минеральная вода, купить минеральную воду, купить воду, купить новоазавскую минеральную воду, купить воду в Денецке и Луганске, купить минеральную воду в городе Донецк и Луганск, Новоазовский завод минеральных вод">
+    <meta name="description"
+          content="Живая вода родного края! Вода Новоазовская черпает свои свойства из недр земли, где она обогащается минеральными солями и приобретает исключительную чистоту.
+        «Новоазовская» добывается из артезианской скважины  глубиной 360 м и разливается непосредственно возле источника, что позволяет сохранить все ее природные и вкусовые свойства.
+        «Новоазовская» – минеральная природная столовая вода с низким уровнем минерализации и относится к типу гидрокарбонатных вод. Благодаря своему идеально сбалансированному составу минеральных солей и микроэлементов «Новоазовская» оптимально подходит для ежедневного употребления.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navigationStyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/backgroundImage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gridProductCardStyle.css' %}">
+
+    <!--link by Vlad-->
+    <link rel="stylesheet" href="{% static 'css/vacancie-description.css' %}">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" />
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar" itemscope itemtype="http://schema.org/LocalBusiness">
+            <div class="drop">
+                <button class="nav-btn">&#9776;</button>
+                <div class="nav-list">
+                    <div class="mainPageButton">
+                        <button class="mainPage" onclick="window.location.href = '{% url 'home' %}';">Новоазовская</button>
+                    </div>
+                    <div class="map">
+                        <a href="{% url 'factorio' %}"><img src="/media/images/icons/bxs_map.png" alt="Геопозиция"></a>
+                    </div>
+                    <div class="info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <p>287600 , Донецкая народная республика, г. Новоазовская 50 лет СССР 1</p>
+                        <a href="{% url 'home' %}" itemprop="url">ГЛАВНАЯ</a>
+                        <a href="{% url 'aboutUs' %}" itemprop="about">О НАС</a>
+                        <a href="{% url 'description' %}" itemprop="description">О ВОДЕ</a>
+                        <a href="{% url 'factorio' %}" itemprop="manufacturer">ПРОИЗВОДСТВО</a>
+                        <a href="{% url 'vacancies' %}" itemprop="hiringOrganization">ВАКАНСИИ</a>
+                        <a href="{% url 'contacts' %}" itemprop="description">КОНТАКТЫ</a>
+                    </div>
+                    <div class="messangers">
+                        <a href="viber://chat?number=%2B79493329725"><img src="/media/images/icons/viber.png" alt="Viber"></a> <br>
+                        <a href="https://api.whatsapp.com/send/?phone=79493329725"><img src="/media/images/icons/whatsapp.png" alt="WhatsApp"></a>
+                    </div>
+                    <div class="numberOne" itemprop="telephone">
+                        <p>Коммерческий отдел</p>
+                        <a href="tel:79493020460">+7 (949) 302 04 60</a>
+                    </div>
+                    <div class="numberTwo" itemprop="telephone">
+                        <p>Отдел кадров</p>
+                        <a href="tel:79493787498">+7 (949) 378 74 98</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="box-snap">
+        {% block content %}{% endblock %}
+
+
+
+        <footer class="footer">
+            <div class="main-footer" itemscope itemtype="http://schema.org/LocalBusiness">
+                <div class="footer-text">
+                    <h1 itemprop="name">Доставляем чистоту и бодрость каждый день!</h1>
+                </div>
+                <div class="footer-info">
+                    <div class="mainFooterPageButton">
+                        <button class="mainPage" onclick="window.location.href = '{% url 'home' %}';">Новоазавская</button>
+                    </div>
+                    <div class="footer-listOne" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/OfferCatalog">
+                        <ul>
+                            <li><a href="{% url 'home' %}" itemprop="url">ГЛАВНАЯ</a></li>
+                            <li><a href="{% url 'aboutUs' %}" itemprop="about">О НАС</a></li>
+                            <li><a href="{% url 'description' %}" itemprop="description">О ВОДЕ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-listTwo" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/OfferCatalog">
+                        <ul>
+                            <li><a href="{% url 'factorio' %}" itemprop="manufacturer">ПРОИЗВОДСТВО</a></li>
+                            <li><a href="{% url 'vacancies' %}" itemprop="hiringOrganization">ВАКАНСИИ</a></li>
+                            <li><a href="{% url 'contacts' %}" itemprop="telephone">КОНТАКТЫ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-icons">
+                        <a href="https://api.whatsapp.com/send/?phone=79493329725"><img src="/media/images/icons/whatsapp2.png" alt="Иконка WhatsApp"></a>
+                        <a href="viber://chat?number=%2B79493329725"><img src="/media/images/icons/viber2.png" alt="Иконка Viber"></a>
+                    </div>
+                    <div class="footer-numbers" itemprop="telephone">
+                        <a href="tel:79493329725">+7-949-332-97-25</a>
+                    </div>
+                </div>
+                <div class="footer-map" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <a href="{% url 'factorio' %}"><img src="/media/images/icons/mark.svg.png" alt="Геопозиция"></a>
+                    <p itemprop="addressLocality">287600 , Донецкая народная республика, г Новоазовская 50 лет СССР 1</p><a href="mailto:nov-voda@mail.ru">
+                        <img src="/media/images/icons/mail.svg.png" alt="Иконка электронной почты">
+                    </a><p itemprop="email">nov-voda@mail.ru</p>
+                </div>
+                <div class="dataSave">
+                    <p><a href="{% url 'contacts' %}">Связаться с нами</a></p>
+                    <p><a href="#">Политика конфиденциальности</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

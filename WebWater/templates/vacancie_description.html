@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ vacancie.tittle }}{% endblock %}
+
+{% block content %}
+<!--style="white-space: pre; необходим, чтобы сохранялся перенос строки, заданный админом в админке-->
+<div class="div">
+    <div class="inner">
+        <div class="rectangle-wrapper">
+            <div class="frame-child"></div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="div1">
+            <span class="txt">
+                <p class="p"> {{ vacancie.working_conditions }}</p>
+            </span>
+        </div>
+    </div>
+    <img class="child" alt="" src="/media/images/backgrounds/group-53@2x.png" />
+
+    <div class="container">
+        <div class="div2">Требования:</div>
+    </div>
+    <div class="word-excel-wrapper">
+        <div class="word-excel-container">
+            <p class="p">{{ vacancie.requirements }}</p>
+        </div>
+    </div>
+    <img class="item" alt="" src="/media/images/backgrounds/group-54@2x.png" />
+
+    <img class="group-icon" alt="" src="/media/images/backgrounds/group-55@2x.png" />
+
+    <div class="frame">
+        <div class="div3">Обязанности:</div>
+    </div>
+    <div class="group-div">
+        <a class="a" href="tel:+79493787498" target="_blank">+7 949 378 74 98</a>
+    </div>
+    <div class="c-wrapper">
+        <div class="c-container">
+            <p class="p">{{ vacancie.duties }}</p>
+        </div>
+    </div>
+    <div class="wrapper1">
+        <div class="div4">{{ vacancie.tittle }} в Новоазовске</div>
+    </div>
+    <div class="wrapper2">
+        <div class="div5">По вопросам работы:</div>
+    </div>
+    <div class="wrapper3">
+        <div class="div6">Условия работы:</div>
+    </div>
+    <img class="child1" alt="" src="/media/images/backgrounds/group-82@2x.png" />
+    <div class="div7">
+        Компания “Новоазовский Завод Минеральной Воды” предлагает информацию о
+        работе и вакансиях в компании.
+    </div>
+</div>
+{% include 'form.html' %}
+{% endblock %}

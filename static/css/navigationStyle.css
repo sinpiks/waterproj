@@ -1,0 +1,206 @@
+.nav-list {
+    margin: 20px;
+    margin-top: 0.5em;
+    margin-bottom: 4em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1);
+    text-align: center;
+    align-items: center;
+    font-size: 1.03em;
+    /*margin-right: 5.5em;*/             /*20px �� ������ ����� (1-�� ������), ��������� px - ����������� �������� � numberOne � numberTwo*/
+}
+
+.mainPageButton {
+    grid-column: 2/3;
+    /*padding-left: 3em;*/
+}
+
+.mainPage {
+    padding: 0.35em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    border-radius: 10px;
+    background-color: rgba(162, 224, 235, 1);
+    color: rgba(255, 255, 255, 1);
+    border: 0;
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 182.5%; /* 43.8px */
+}
+
+.map {
+    grid-column: 3/4;
+    width: 100%;
+    justify-self: end;
+}
+
+.info {
+    grid-column: 4/9;
+    line-height: 1.65em;
+    width: 43vw;
+
+}
+
+
+.info a{
+    color: rgba(0, 0, 0, 1);
+    margin-right: 0.3em;
+}
+
+.messangers {
+    grid-column: 9/10;
+    justify-self: start;
+    width: 100%;
+}
+
+/* .messangers img{
+    width: 33%;
+} */
+
+.numberOne {
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size:1em;
+    grid-column: 10/11;
+    width: 30vh;
+    /*margin-left: -60px;*/
+
+}
+
+.numberOne a{
+    color: rgba(0, 0, 0, 1);
+    color:gray;
+    font-family: Raleway;
+}
+
+.numberOne a:hover{
+    color: rgb(57, 57, 57);
+}
+
+.numberTwo {
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 1em;
+    grid-column: 11/12;
+    width: 20vh;
+    /*margin-left: 20px;*/
+
+}
+
+.numberTwo a{
+    color: rgba(0, 0, 0, 1);
+    color:gray;
+    font-family: Raleway;
+}
+
+.numberTwo a:hover{
+    color: rgb(57, 57, 57);
+}
+
+.numberOne a, .numberTwo a{
+    text-decoration: underline;
+}
+
+.nav-list a{
+    text-align: center;
+}   
+
+.nav-btn{
+    display: none;
+}
+
+@media (max-width: 800px){
+    .nav-btn{
+        display: block;
+        font-size: 2em;
+        padding-inline: 1em;
+        padding-bottom: 0.09em;
+        background: rgba(162, 224, 235, 1);
+        color: rgba(255, 255, 255, 1);
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav-btn:hover{
+        color: black;
+    }
+
+    .nav-list{
+        display: none;
+        z-index: 3;
+        margin: 0;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .info{
+        display: grid;
+        grid-template-columns: repeat(1);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .drop:hover .nav-list{
+        display: block;
+        position: absolute;
+        background: rgba(162, 224, 235, 1);
+    }
+
+    .drop:hover .nav-list .map{
+        display: none;
+    }
+
+    .drop:hover .nav-list p{
+        display: none;
+    }
+
+    .nav-bar{
+        justify-content: space-between;
+    }
+
+    div.backgroundImageText {
+        margin-left: 2em;
+    }
+
+    .ivent-catalog{
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .catalogText{
+        font-size: 2em;
+        color: rgba(0, 49, 114, 1);
+    }
+}
+
+@media (max-width: 600px){
+    div.backgroundImageText {
+        margin-left: 0.5em;
+    }
+
+    .ivent-catalog{
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    
+    .catalogText{
+        font-size: 1.2em;
+        color: rgba(0, 49, 114, 1);
+    }
+
+    .orderButton button{
+        font-size: 0.8em;
+        width: 100%;
+    }
+
+    .description{
+        margin-top: 0em;
+    }
+
+    .description p{
+        font-size: 0.8em;
+    }
+}

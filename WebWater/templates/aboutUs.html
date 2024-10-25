@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+<div class="main-aboutUs-container">
+    <div class="aboutUs-top-text-container aboutUs-image-container">
+        <p>"Вода, которая <br> наполняет жизнь <br> радостью и <br> здоровьем!"</p>
+    <!---->
+        </div>
+    <div class="aboutUs-image-container">
+        <div class="imageOne">
+            <img style="opacity: 0;" src="/media/images/pictures/image 20.png" alt="">
+        </div>
+        <div class="imageTwo">
+            <img style="opacity: 0;" src="/media/images/pictures/image 22.png" alt="">
+        </div>
+        <!---->
+    </div>
+    <div class="main-aboutUs-headline-container">
+        <p>О нас</p>
+    </div>
+</div>
+<section>
+    <div class="main-theme fourTheme">
+        <div class="main-text-container">
+            <div class="left-bar">
+
+            </div>
+            <div class="text-container">
+                <div class="description">
+                    <h1>Новоазовский завод минеральной воды</h1>
+                    <p>
+                        расположен в городе Новоазовск Донецкой <br>
+                        области, неподалеку от Национального <br>
+                        заповедника Хомутовская степь <br>
+                        Новоазовский завод минеральной воды <br>
+                        располагает двумя произодственными <br>
+                        площадками.
+                    </p>
+                    <p>
+                        Основным видом деятельности Новоазовского <br>
+                        завода минеральной воды является добыча и <br>
+                        розлив природной минеральной воды, а также <br>
+                        реализация ее под собственной торговой маркой <br>
+                        "Новоазовская"
+                    </p>
+                </div>
+                <div class="secondDescription">
+                    <p>
+                        Вода "Новоазовская" добывается из скважины <br> глубиной 360 метров <br>
+                        Производимая минеральная вода отличается <br>
+                        хорошими вкусовыми качествами и является <br>
+                        неоднократным победителем Всеукраинских <br>
+                        выставок и дегустаций. <br>
+                        На сегодня завод реализует свою продукцию через <br>
+                        ряд дистрибуторов на территории ДНР и ЛНР
+                    </p>
+                </div>
+            </div>
+            <div class="right-bar">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main-map">
+
+        <div class="mapContainer1">
+            <div>
+                <h2>Карта нашего<br />края</h2>
+
+            </div>
+
+            <div id="clipping1">
+                <iframe class="hidemapbar" src="https://www.google.com/maps/d/embed?mid=1-APmcYxcm3j3_T_DMWwBMyOfP70TuGU&ehbc=2E312F&noprof=1" width="1212" height="1552"></iframe>
+            </div>
+        </div>
+
+
+        <div class="mapContainer2">
+            <div id="clipping2">
+                <iframe class="hidemapbar" src="https://www.google.com/maps/d/embed?mid=1S95_szjbb6-n_yGWi_rHtsFTfJj9eFY&ehbc=2E312F&noprof=1" width="1163" height="670"></iframe>
+            </div>
+        </div>
+
+
+    </div>
+    {% include 'form.html' %}
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+
+{% block title %}About water{% endblock %}
+
+{% block content %}
+<section>
+    <div class="backgroundImage waterProof">
+        <img src="/media/images/backgrounds/шапка 2.svg" alt="О воде">
+    </div>
+</section>
+<section>
+    <div class="main-theme secondTheme">
+        <div class="main-text-container">
+            <div class="left-bar">
+
+            </div>
+            <div class="text-container">
+                <div class="description">
+                    <h1 class="heading hOne">Живая вода родного края</h1>
+                    <p class="paragraph pOne">
+                        Вода Новоазовская черпает свои свойства из <br>
+                        недр земли, где она обогащается <br>
+                        минеральными солями и приобретает <br>
+                        исключительную чистоту.<br>
+                        «Новоазовская» добывается из артезианской<br>
+                        скважины глубиной 360 м и разливается<br>
+                        непосредственно возле источника, что <br>
+                        позволяет сохранить все ее природные и <br>
+                        вкусовые свойства.<br>
+                        «Новоазовская» – минеральная природная <br>
+                        столовая вода с низким уровнем <br>
+                        минерализации и относится к типу <br>
+                        гидрокарбонатных вод. Благодаря своему <br>
+                        идеально сбалансированному составу <br>
+                        минеральных солей и микроэлементов <br>
+                        «Новоазовская» оптимально подходит для ежедневного употребления.
+                    </p>
+                </div>
+                <div class="formula formulaOne">
+                    <img src="/media/images/pictures/формула.png" alt="Формула расчёта">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-bar">
+
+    </div>
+</section>
+
+
+<section>
+    <div class="main-productContainer">
+
+        {% for type in type_of_product %}
+        <div class="catalog-description {{type.0}}">
+            {% if type == type_of_product.0 %}
+                <h1>Каталог</h1>
+            {% endif %}
+            <p>{{type.2}}</p>
+        </div>
+        <div class="things-container {{type.1}}">
+            {% for product in products %}
+                {% if product.type_bottle == type.0 %}
+                    <div class="productCard-container">
+                        <img src={{ product.image.url }} alt={{ product.tittle }}>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+<section>
+    <div class="backgroundImage">
+        <img src="/media/images/backgrounds/Group 45.svg" alt="">
+    </div>
+</section>
+{% endblock %}

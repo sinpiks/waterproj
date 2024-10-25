@@ -1,0 +1,125 @@
+{% extends 'layout.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+<div class="item-snap">
+        <div class="backgroundImage">
+            <img src="media/images/backgrounds/home_head.png" alt="Фоновое изображение - Хомутовская степь">
+            <div class="backgroundImageText">
+                <h1 class="heading">Живая вода родного края!</h1>
+                <p class="paragraph">Добывается из артезианского <br> источника глубиной 350 метров</p>
+            </div>
+        </div>
+</div>
+
+<div class="item-snap">
+    <div class="ivent-catalog">
+        <div class="catalogText">
+            <p>Каталог</p>
+        </div>
+        <div class="orderButton">
+            <button onclick="window.location.href = '{% url 'description' %}';">Заказать</button>
+        </div>
+    </div>
+    <div class="main-catalog-container">
+        <div class="container-catalog">
+            <div class="product-example">
+                <img src="/media/images/products/0.5.png" alt="Питьевая вода объёмом 0.5 литров">
+            </div>
+            <div class="product-example">
+                <img src="/media/images/products/1.5.png" alt="Питьевая вода объёмом 1.5 литра">
+            </div>
+            <div class="product-example">
+                <img src="/media/images/products/2.png" alt="Питьевая вода объёмом 2 литра">
+            </div>
+            <div class="product-example">
+                <img src="/media/images/products/5.png" alt="Питьевая вода объёмом 5 литров">
+            </div>
+            <div class="product-example">
+                <img src="/media/images/products/19.png" alt="Питьевая вода объёмом 19 литров">
+            </div>
+            <div class="product-example">
+                <img src="/media/images/products/н 1.5.png" alt="Напиток безалкогольный объёмом 1.5 литра">
+            </div>
+            <div class="product-example">
+                <img src="/media/images/products/н 1.5 (1).png" alt="Напитки безалкогольные объёмом 2 литра">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="item-snap">
+    <section>
+        <!-- <div class="backgroundImage"> -->
+        <!-- <img src="sources/img/Rectangle 18 (1).png" alt="Фоновое изображение - Хомутовская степь"> -->
+        <div class="main-theme">
+            <div class="main-text-container">
+                <div class="left-bar">
+
+                </div>
+                <div class="text-container">
+                    <div class="description">
+                        <h1>Живая вода родного края</h1>
+                        <p>
+                            Вода Новоазовская черпает свои свойства из <br>
+                            недр земли, где она обогащается <br>
+                            минеральными солями и приобретает <br>
+                            исключительную чистоту. <br>
+                            «Новоазовская» добывается из артезианской <br>
+                            скважины глубиной 360 м и разливается <br>
+                            непосредственно возле источника, что <br>
+                            позволяет сохранить все ее природные и <br>
+                            вкусовые свойства. <br>
+                            «Новоазовская» – минеральная природная <br>
+                            столовая вода с низким уровнем <br>
+                            минерализации и относится к типу <br>
+                            гидрокарбонатных вод. Благодаря своему <br>
+                            идеально сбалансированному составу <br>
+                            минеральных солей и микроэлементов <br>
+                            «Новоазовская» оптимально подходит для ежедневного употребления.
+                        </p>
+                    </div>
+                    <div class="formula">
+                        <img src="/media/images/pictures/формула.png" alt="Формула расчёта">
+                    </div>
+                </div>
+                <div class="right-bar">
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="item-snap">
+    <section>
+        <div class="main-theme thirdTheme">
+            <div class="main-whyNot-container">
+                <h1>Почему мы?</h1>
+                <div class="whyNot-container">
+                    <ul>
+                        <li>
+                            <img src="/media/images/icons/material-symbols_water-pump.png" alt="Иконка водяной помпы">
+                            Добывается из артезианского источника глубиной 350 метров <br>
+                        </li>
+                        <li>
+                            Доставка во все районы Донецка и другие
+                            <img src="/media/images/icons/carbon_delivery-truck.png" alt="Иконка грузовика"> <br>
+                        </li>
+                        <li>
+                            <img src="/media/images/icons/ic_round-currency-exchange.png" alt="Иконка переработки отходов">
+                            Принимаем к обмену бутыли других доставок воды <br>
+                        </li>
+                        <li>
+                            Экономим ваше время, силы и деньги
+                            <img src="/media/images/icons/fluent_savings-24-regular.png" alt="Иконка свиньи">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+        {% endblock %}
